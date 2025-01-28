@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nive's Portfolio</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Helvetica', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #2d3748;
+            color: white;
+            padding: 16px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav a {
+            color: white;
+            font-size: 18px;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #fbbf24;
+        }
+
+        /* Hero Section */
+       #hero {
+            background: url('./assets/1.webp') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            margin-top: 80px;
+        }
+
+        #hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+
+        #hero p {
+            font-size: 1.25rem;
+        }
+
+        #hero a {
+            display: inline-block;
+            background-color: #fbbf24;
+            padding: 15px 30px;
+            font-size: 1.125rem;
+            border-radius: 9999px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        #hero a:hover {
+            background-color: #facc15;
+        }
+        
+
+        /* Section Styles */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1.125rem;
+            margin-bottom: 30px;
+        }
+
+        .project-card, .education-card, .link-card, .certificate-card, .award-card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            margin: 10px;
+        }
+
+        .project-card:hover, .education-card:hover, .certificate-card:hover, .award-card:hover {
+            transform: translateY(-10px);
+            background-color: #fef2f2;
+        }
+
+        /* Flexbox for Projects, Education, Certificates, and Awards */
+        .projects-grid, .links-grid, .education-grid, .certificates-grid, .awards-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .project-card, .education-card, .certificate-card, .award-card, .link-card {
+            max-width: 280px;
+            text-align: center;
+        }
+
+        .link-card a, .certificate-card a, .award-card a {
+            color: #3182ce;
+            font-size: 1.125rem;
+            text-decoration: underline;
+        }
+
+        .link-card a:hover, .certificate-card a:hover, .award-card a:hover {
+            color: #2b6cb0;
+        }
+
+        /* Resume Section */
+        #resume-section {
+            background-color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        #resume-section a {
+            background-color: #3182ce;
+            color: white;
+            padding: 12px 25px;
+            font-size: 1.125rem;
+            border-radius: 9999px;
+            margin-top: 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        #resume-section a:hover {
+            background-color: #2b6cb0;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #2d3748;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            #hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .projects-grid, .links-grid, .education-grid, .certificates-grid, .awards-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <a href="#hero">Nive's Portfolio</a>
+            <div>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
+                <a href="#problem-solving">Problem Solving</a>
+                <a href="#certificates">Certificates</a>
+                <a href="#awards">Awards</a>
+                <a href="#resume-section">Resume</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Hi, I'm Nive</h1>
+        <p>Data Scientist | Aspiring AI/ML Expert | Problem Solver</p>
+        <a href="#projects">View My Projects</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="background-color: #f4f5f7; padding: 20px; text-align: center;">
+    <h2>About Me</h2>
+    <p style="font-family: 'Arial', sans-serif; font-size: 18px; color: #333; ">
+    I am <b style="color:black; text-transform: uppercase;">Niveditha.J</b>, a diligent and enthusiastic student currently pursuing a Bachelor's degree in Computer Science Engineering. With a keen interest in the ever-evolving field of technology, I am dedicated to honing my skills and staying abreast of the latest trends and developments in all sorts of fields.
+    </p>
+
+    </section>
+
+
+    <!-- LeetCode & GFG Problem Solving Section -->
+    <section id="problem-solving" style="background-color: #ffffff;">
+        <h2>LeetCode & GFG Problem Solving</h2>
+        <p>Here are some problem-solving platforms I actively participate in to sharpen my skills:</p>
+        <div class="links-grid">
+            <div class="link-card">
+                <a href="https://leetcode.com/u/NivedithaJ_05/">LeetCode</a>
+            </div>
+            <div class="link-card">
+                <a href="https://www.geeksforgeeks.org/user/nivec6c3i/">GeeksforGeeks</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section as Card -->
+    <section id="education" style="background-color: #f4f5f7;">
+        <h2>Education</h2>
+        <div class="education-grid">
+            <div class="education-card">
+                <h3>Bachelor of Engineering (B.E.)</h3>
+                <p>Specialization: Computer Science and Engineering</p>
+                <p>R.M.K COLLEGE OF ENGINEERING AND TECHNOLOGY</p>
+                <p>2022-2026</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+     <section id="skills">
+    <h2>Skills</h2>
+
+    <!-- HTML Skill -->
+    <div class="skill" style="display: inline-block; margin: 20px; text-align: center;">
+        <h3>HTML</h3>
+        <div class="circle" style="width: 100px; height: 100px; border-radius: 50%; background-color: #e0e0e0; display: flex; justify-content: center; align-items: center; position: relative; transition: background-color 0.3s ease;">
+            <span class="percentage" style="font-size: 20px; font-weight: bold; color: #333;">90%</span>
+        </div>
+    </div>
+
+    <!-- CSS Skill -->
+    <div class="skill" style="display: inline-block; margin: 20px; text-align: center;">
+        <h3>CSS</h3>
+        <div class="circle" style="width: 100px; height: 100px; border-radius: 50%; background-color: #e0e0e0; display: flex; justify-content: center; align-items: center; position: relative; transition: background-color 0.3s ease;">
+            <span class="percentage" style="font-size: 20px; font-weight: bold; color: #333;">85%</span>
+        </div>
+    </div>
+
+    <!-- Python Skill -->
+    <div class="skill" style="display: inline-block; margin: 20px; text-align: center;">
+        <h3>Python</h3>
+        <div class="circle" style="width: 100px; height: 100px; border-radius: 50%; background-color: #e0e0e0; display: flex; justify-content: center; align-items: center; position: relative; transition: background-color 0.3s ease;">
+            <span class="percentage" style="font-size: 20px; font-weight: bold; color: #333;">95%</span>
+        </div>
+    </div>
+
+    <!-- AI/ML Skill -->
+        <div class="skill" style="display: inline-block; margin: 20px; text-align: center;">
+            <h3>AI/ML</h3>
+            <div class="circle" style="width: 100px; height: 100px; border-radius: 50%; background-color: #e0e0e0; display: flex; justify-content: center; align-items: center; position: relative; transition: background-color 0.3s ease;">
+                <span class="percentage" style="font-size: 20px; font-weight: bold; color: #333;">80%</span>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // No need for hover to show percentage now, just set initial state
+        document.querySelectorAll('.circle').forEach(function(circle) {
+            circle.addEventListener('mouseover', function() {
+                circle.style.backgroundColor = '#FFC0CB';
+            });
+            circle.addEventListener('mouseout', function() {
+                circle.style.backgroundColor = '#e0e0e0';
+            });
+        });
+    </script>
+
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>RAG-based QA Chatbot</h3>
+                <p>An AI-driven chatbot designed to answer business-related questions using a retrieval-augmented generation framework.</p>
+                <h4>Tech Stack</h4>
+                <p>Python, OpenAI, FAISS, Flask</p>
+            </div>
+            <div class="project-card">
+                <h3>College Bus Tracker</h3>
+                <p>An app that helps students track the college bus and get notified when it's near their stop.</p>
+                <h4>Tech Stack</h4>
+                <p>React Native, Firebase</p>
+            </div>
+            <div class="project-card">
+                <h3>Google Product Suggestion</h3>
+                <p>A project leveraging NLP to suggest products based on user search queries on Google.</p>
+                <h4>Tech Stack</h4>
+                <p>Python, GPT-3, BeautifulSoup</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Certifications Section -->
+    <section id="certificates" style="background-color: #f4f5f7;">
+        <h2>Certifications</h2>
+        <div class="certificates-grid">
+            <div class="certificate-card">
+                <h3>AI Certification</h3>
+                <a href="./assets/microsoft ai.pdf">Download Certificate</a>
+            </div>
+            <div class="certificate-card">
+                <h3>Prompt Engineering</h3>
+                <a href="./assets/Coursera prompt engineering.pdf">Download Certificate</a>
+            </div>
+            <div class="certificate-card">
+                <h3>Web Development</h3>
+                <a href="./assets/Udemy web development.pdf">Download Certificate</a>
+            </div>
+            <div class="certificate-card">
+                <h3>Artificial Intelligence Job Simulation</h3>
+                <a href="./assets/certificate 21-cognizant.pdf"download>Download Certificate</a>
+            </div>
+            <div class="certificate-card">
+                <h3>Python</h3>
+                <a href="./assets/Python coursera certificate.pdf"download>Download Certificate</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" style="background-color: #ffffff;">
+        <h2>Awards & Recognitions</h2>
+        <div class="awards-grid">
+            <div class="award-card">
+                <h3>Weekly Coding Challenge - Coding Round</h3>
+                <p>Rank 1 – Weekly Coding Challenge (Unstop) Secured Rank 1 by solving 5 challenging problems, showcasing strong problem-solving, coding, and algorithmic skills. Excited for more growth and future challenges! </p>
+            </div>
+            <div class="award-card">
+                <h3>Introduction to IOT Badge </h3>
+                <p>I have successfully completed the Cisco IoT Introductory Course with  a Badge! This comprehensive program has equipped me with essential knowledge and skills to harness the power of the Internet of Things (IoT) and apply it to real-world scenarios.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume-section">
+        <h2>Download My Resume</h2>
+        <a href="assets/Resume.pdf" download>Download Resume</a>
+    </section>
+    <!--Contact Me-->
+        <section id="contact" style="background-color: #f9f9f9; padding: 40px 0;">
+        <h2 style="text-align: center; font-size: 32px; color: #333; margin-bottom: 20px;">Contact Me</h2>
+        <p style="text-align: center; font-size: 18px; color: #555;">I'd love to hear from you! Feel free to reach out if you have any questions, collaboration ideas, or just want to connect.</p>
+        
+        <div style="display: flex; justify-content: center; gap: 30px; margin-top: 40px;">
+            <a href="mailto:nivecs095@rmkcet.ac.in" style="font-size: 18px; color: #ff6347; text-decoration: none; padding: 10px 20px; border: 2px solid #ff6347; border-radius: 8px; transition: background-color 0.3s, color 0.3s;">
+                <span>📧 Email</span>
+            </a>
+            <a href="https://www.linkedin.com/in/niveditha-j-67663724b/" target="_blank" style="font-size: 18px; color: #0077b5; text-decoration: none; padding: 10px 20px; border: 2px solid #0077b5; border-radius: 8px; transition: background-color 0.3s, color 0.3s;">
+                <span>🔗 LinkedIn</span>
+            </a>
+            <a href="https://github.com/Niveditha-J" target="_blank" style="font-size: 18px; color: #333; text-decoration: none; padding: 10px 20px; border: 2px solid #333; border-radius: 8px; transition: background-color 0.3s, color 0.3s;">
+                <span>🐱 GitHub</span>
+            </a>
+        </div>
+        
+        <p style="text-align: center; margin-top: 40px; font-size: 16px; color: #777;">Looking forward to hearing from you!</p>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Made with ❤️ by Nive | &copy; 2025</p>
+    </footer>
+
+</body>
+</html>
